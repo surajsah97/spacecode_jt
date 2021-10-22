@@ -1,10 +1,10 @@
 import React from 'react'
 
-const Home = () => {
+export const Home = () => {
     return (
         <div>
-            home page
+            hello home page
         </div>
     )
 }
-export default Home
+export default Home;
