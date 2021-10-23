@@ -3,7 +3,8 @@ import axios from "axios";
 const initialvalue={
     users:[],
     isResp:"",
-    error:null
+    error:null,
+    forgot_pass:[]
 }
 // const Signin=(state={},action)=>{
 //     switch(action.type){
@@ -28,7 +29,19 @@ const Signin=(state=initialvalue,action)=>{
            return state
     }
 }
+const Forget_pass=(state=initialvalue,action)=>{
+    switch (action.type) {
+        case "FORGOT_PASS":
+            return {
+                forgot_pass: action,
+            };
+        default:
+            break;
+    }
+}
+
+// forgot_pass: action.forgot_pass
 
 
 
-export default Signin
+export {Signin,Forget_pass};

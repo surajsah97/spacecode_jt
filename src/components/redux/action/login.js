@@ -1,56 +1,5 @@
 import { constant} from "./Types";
 import axios from "axios";
-
-// import axios from "axios";
-// const Getlogin=(data)=>{
-// return dispatch=>{
-//     axios({
-//         method: 'post',
-//         url: 'http://localhost:3050/login',
-//         data
-//       })
-//       .then(function (response) {
-//         console.log(response);
-//         return{type:constant.USER_VERIFY,
-//             payload:response}
-//       })
-//       .catch(function (error) {
-//         console.log(error)
-// })
-// }}
-// const Ragister_fail=()=>{
-//     return {
-//         type:
-//     }
-// }
-// const Ragister_success
-// const Ragister_start
-
-
-
-
-
-
-
-// .then(() => {
-//     history.push("/profile");
-//     window.location.reload();
-//   })
-//   .catch(() => {
-//     setLoading(false);
-//   });
-// const get_logged_succes=(data)=>{
-//     return {
-//         type:"Get_success_login",
-//         payload:data
-//     }
-// }
-// const get_logged_fail=(data)=>{
-//     return{
-//         type:"Get_failed_login",
-//         payload:data
-//     }
-// }
 const Sendlogin=(data)=>{
   let headers = {
     "Content-Type": "application/json",
@@ -75,6 +24,7 @@ const Sendlogin=(data)=>{
                 payload:[]
             }))
     })
+
         
     }
 }
@@ -82,13 +32,25 @@ const Sendlogin=(data)=>{
 
 
 
-//     } catch (error) {
-//         dispatch({
-//             type: CONSTANTS.USER_LOGIN_FAIL,
-//             payload: error?.response?.statusText
-//         });
-//     }
-// };
 
-// }
-export default Sendlogin;
+
+const forgotPassword=(post)=> {
+  let headers = {
+    "Content-Type": "application/json",
+  };
+  return (dispatch) => {
+    // return axios.post("email", post, { headers: headers }).then((response) => {
+    //   if (response.data !== "") {
+    //     dispatch( {
+    //       type: "FORGOT_PASS",
+    //       forgot_pass: response,
+    //     });
+        
+    //   } else {
+    //     // dispatch(requestForgot([]));
+    //     console.log("error");
+    //   }
+    // });
+  };
+}
+export {forgotPassword,Sendlogin}

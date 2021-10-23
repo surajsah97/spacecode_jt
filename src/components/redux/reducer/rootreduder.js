@@ -1,6 +1,7 @@
-import Signin from "./login";
+import {Signin,Forget_pass} from "./login";
 import { combineReducers } from "redux";
 const Rootreducer=combineReducers({
-    Signin
+    Signin,
+    // Forget_pass
 })
 export default Rootreducer;

@@ -6,8 +6,10 @@ import Signup from './components/signup';
 import Home from './components/home';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+// import socketClient from 'socket.io-client';
 
 const App = () => {
+  // const socket = socketClient();
   return (
     <div>
       <ToastContainer/>
